@@ -27,7 +27,6 @@
 (define (factorial n)
   (product identity 1 inc n))
 
-
 ; helpers
 (define (cube x) (* x x x))
 (define (inc n) (+ n 1))
