@@ -1,4 +1,4 @@
-#SICP exercise 1.34
+# SICP exercise 1.34
 
 `(f f)` --> `(f 2)` --> `(2 2)`
 
