@@ -15,13 +15,14 @@ Found in exercise 1.22:
 * Near 1,000,000 - 999961, 999979 and 999983
 
 ### Test results
-* **Prime number tested \*\*\* computation time - using the original `exp-mod` procedure** / **using the modified one**
-* 983 *** 28 / 143
-* 991 *** 30 / 157
-* 997 *** 27 / 139
-* 999961 *** 45 / 10679548
-* 999979 *** 46 / 8820971
-* 999983 *** 47 / 10363251
+Prime number tested | computation time - using the original `exp-mod` procedure / using the modified one
+------------------- | ----------------------------------------------------------------------------------------
+983 | 28 / 143
+991 | 30 / 157
+997 | 27 / 139
+999961 | 45 / 10679548
+999979 | 46 / 8820971
+999983 | 47 / 10363251
 
 ## Conclusion
 
