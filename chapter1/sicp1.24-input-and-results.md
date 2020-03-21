@@ -16,19 +16,21 @@ Found in exercise 1.22:
 (__Note:__ I misread  exercise 1.22 and implemented it to find the three largest numbers smaller than _n_.)
 
 #### Results
-* **Prime number \*\*\* elapsed time**
-* 983 *** 28
-* 991 *** 30
-* 997 *** 27
-* 9949 *** 37
-* 9967 *** 37
-* 9973 *** 38
-* 99971 *** 38
-* 99989 *** 41
-* 99991 *** 42
-* 999961 *** 45
-* 999979 *** 46
-* 999983 *** 47
+
+Prime number | elapsed time
+------------ | ------------
+983 | 28
+991 | 30
+997 | 27
+9949 | 37
+9967 | 37
+9973 |38
+99971 | 38
+99989 | 41
+99991 | 42
+999961 | 45
+999979 | 46
+999983 | 47
 
 
 
