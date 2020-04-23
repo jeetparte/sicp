@@ -99,7 +99,3 @@
                          (make-branch 2 component)))
 (test-mobile component)
 (test-mobile mob)
-
-
-
-
