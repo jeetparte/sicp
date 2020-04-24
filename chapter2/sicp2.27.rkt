@@ -20,7 +20,6 @@
          (append (deep-reverse (cdr items))
                  (list (car items))))))
 
-
 ; Note: the iterative variant can be obtained similarly from our iterative reverse procedure of exercise 2.18
 
 ; tests
