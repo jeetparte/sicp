@@ -7,9 +7,9 @@
         (else (cons (square-tree (car tree))
                     (square-tree (cdr tree))))))
 
-; note how we use the above procedure on single elements (leaves) as well.
+; notice how we use the above procedure on single elements (leaves) as well.
 ; we could separate that logic and distinguish the base cases better.
-; Trade-off with conciseness here.
+; trade-off with conciseness here.
 
 ; b. using map
 (define (square-tree tree)
