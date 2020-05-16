@@ -38,7 +38,6 @@
 ;              (unique-pairs (dec i))))
 ;  (enumerate-interval 1 n)))
 
-
 ; another approach
 ;(define (unique-triplets n)
 ;  (flatmap (lambda (i)
