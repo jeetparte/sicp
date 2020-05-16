@@ -24,6 +24,13 @@
 ; Notice the inner flatmap that returns set of possible pairs j, k for a given i
 ; is actually `unique-pairs` from the previous exercise.
 
+; ex 2.40
+(define (unique-pairs n)
+  (flatmap (lambda (i)
+             (map (lambda (j) (list i j))
+                  (enumerate-interval 1 (dec i))))
+           (enumerate-interval 1 n)))
+
 ; Using `unique-pairs` 
 ;(define (unique-triplets n)
 ;  (flatmap (lambda (i)
@@ -31,12 +38,15 @@
 ;              (unique-pairs (dec i))))
 ;  (enumerate-interval 1 n)))
 
-; ex 2.40
-(define (unique-pairs n)
-  (flatmap (lambda (i)
-             (map (lambda (j) (list i j))
-                  (enumerate-interval 1 (dec i))))
-           (enumerate-interval 1 n)))
+
+; another approach
+;(define (unique-triplets n)
+;  (flatmap (lambda (i)
+;         (flatmap (lambda (j)
+;                    (map (lambda (k) (list i j k))
+;                         (enumerate-interval 1 (dec j))))
+;                    (enumerate-interval 1 (dec i))))
+;                  (enumerate-interval 1 n)))
 
 ; dependencies
 (define (enumerate-interval a n)
