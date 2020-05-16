@@ -38,7 +38,7 @@
 ;              (unique-pairs (dec i))))
 ;  (enumerate-interval 1 n)))
 
-; another approach
+; Another approach
 ;(define (unique-triplets n)
 ;  (flatmap (lambda (i)
 ;         (flatmap (lambda (j)
@@ -47,7 +47,7 @@
 ;                    (enumerate-interval 1 (dec i))))
 ;                  (enumerate-interval 1 n)))
 
-; dependencies
+; Dependencies
 (define (enumerate-interval a n)
   (if (> a n)
       nil
