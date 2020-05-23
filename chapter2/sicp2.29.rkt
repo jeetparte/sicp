@@ -54,7 +54,7 @@
 ; d.
 ; If we make the suggested change, we only have to change the implementation for some
 ; of the selectors in section a.
-; i.e., we've suceeded in create a modular design which separates abstract data from
+; i.e., we've suceeded in creating a modular design which separates abstract data from
 ; its concrete implementation which I think was the authors' goal here.
 
 ; Test helpers
