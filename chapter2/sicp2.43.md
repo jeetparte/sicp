@@ -29,11 +29,11 @@ Cost of the various operations is summarized below:
 
 | Operation                         | Cost            |
 | --------------------------------- | --------------  |
-| `enumerate-interval`              |   __𝚹(n)__, repeated __length (queen-cols (k - 1))__ |times  
+| `enumerate-interval`              |   __𝚹(n)__, repeated __length (queen-cols (k - 1))__ times |
 | `adjoin-position`*                |   __𝚹(1)__ or __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times  |
 | `flatten (accumulate-append)`     |   __𝚹(n * length (queen-cols (k - 1)))__  |
 | `filter`                          |   __𝚹(n * length (queen-cols (k - 1)))__  |
-| `safe?`                           |   __𝚹(k)__, repeated __n * length (queen-cols (k - 1))|__ times |
+| `safe?`                           |   __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times |
 
 
 Across level, _n_ remains constant, _k_ changes diminuitively. The overall cost is most influenced by the number of board positions: *length (queen-cols (k - 1))*.
