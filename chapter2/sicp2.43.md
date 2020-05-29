@@ -83,11 +83,11 @@ The cost of operations at each level is, for most operations, identical:
 
 | Operation                         | Cost            |
 | --------------------------------- | --------------  |
-| `enumerate-interval`              |   __𝚹(n)__, a single operation now. |
-| `adjoin-position`*                |   __𝚹(1)__ or __𝚹(k)__, repeated __n * length || (queen-cols (k - 1))__ times |
-| `flatten (accumulate-append)`     |   __𝚹(n * length (queen-cols (k - 1)))__  |
-| `filter`                          |   __𝚹(n * length (queen-cols (k - 1)))__  |
-| `safe?`                           |   __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times |
+| `enumerate-interval`              |   __𝚹(n)__, *a single operation now* |
+| `adjoin-position`                 |   same as before |
+| `flatten (accumulate-append)`     |   same as before  |
+| `filter`                          |   same as before  |
+| `safe?`                           |   same as before |
 
 #### Size of inputs and outputs
 
