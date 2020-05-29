@@ -117,6 +117,6 @@ If we compare the two programs,
 R_Louis(queens n) / R_original(queens n) = ((n+1) * n^n) / (n^n * (1 + 1/n + 1/n^2 + ... 1/n^n)) 
                                          = (n+1) / (1 + 1/n + 1/n^2 + ... 1/n^n)
 ```
-which is approximately __n+1__ (as n grows, the denominator approaches 1). Hence, if the original program solved the eight-queens puzzle in time __T__, we would expect Louis' program to solve it in __(n+1)T__.
+which is approximately __n+1__ (as n grows, the denominator approaches 1). Hence, if the original program solved the eight-queens puzzle in time __T__, we would expect Louis' program to solve it in __9 times T__.
 
 P.S. If this does not seem big, then remember that the original process already has an exponential growth. This process will consume a multiple of that.
