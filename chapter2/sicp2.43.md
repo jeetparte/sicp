@@ -99,7 +99,7 @@ For Louis' program,
 
 ```
 R(queens n) = r(queen-cols n) + n * (r(queen-cols (n - 1)) + n * (r(queen-cols (n - 2)) + ...))
-             = r(queen-cols n) + n * r(queen-col (n - 1)) + n^2 * r(queen-cols (n - 2)) + ... n^n * r(queen-cols 0)
+             = r(queen-cols n) + n * r(queen-col (n - 1)) + n^2 * r(queen-cols (n - 2)) + ... + n^n * r(queen-cols 0)
              = Σ n^k * r(queen-cols (n - k)) ... for k = 0 to n
 ```
 
