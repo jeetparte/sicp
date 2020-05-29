@@ -27,12 +27,12 @@ The cost of operations at each level depends on three factors: *n*, *k* and the 
 
 Cost of the various operations is summarized below:
 
---------------------------------- | --------------  
-`enumerate-interval`              |   __𝚹(n)__, repeated __length (queen-cols (k - 1))__ times  
-`adjoin-position`*                |   __𝚹(1)__ or __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times  
-`flatten (accumulate-append)`     |   __𝚹(n * length (queen-cols (k - 1)))__  
-`filter`                          |   __𝚹(n * length (queen-cols (k - 1)))__  
-`safe?`                           |   __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times
+| --------------------------------- | --------------  |
+| `enumerate-interval`              |   __𝚹(n)__, repeated __length (queen-cols (k - 1))__ |times  
+| `adjoin-position`*                |   __𝚹(1)__ or __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times  |
+| `flatten (accumulate-append)`     |   __𝚹(n * length (queen-cols (k - 1)))__  |
+| `filter`                          |   __𝚹(n * length (queen-cols (k - 1)))__  |
+| `safe?`                           |   __𝚹(k)__, repeated __n * length (queen-cols (k - 1))|__ times |
 
 
 Across level, _n_ remains constant, _k_ changes diminuitively. The overall cost is most influenced by the number of board positions: *length (queen-cols (k - 1))*.
@@ -80,12 +80,12 @@ In the tree generated, there are _n_ branches off of each internal node and the 
 
 The cost of operations at each level is, for most operations, identical:
 
---------------------------------- | --------------  
-`enumerate-interval`              |   __𝚹(n)__, a single operation now.
-`adjoin-position`*                |   __𝚹(1)__ or __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times  
-`flatten (accumulate-append)`     |   __𝚹(n * length (queen-cols (k - 1)))__  
-`filter`                          |   __𝚹(n * length (queen-cols (k - 1)))__  
-`safe?`                           |   __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times
+| --------------------------------- | --------------  |
+| `enumerate-interval`              |   __𝚹(n)__, a single operation now. |
+| `adjoin-position`*                |   __𝚹(1)__ or __𝚹(k)__, repeated __n * length || (queen-cols (k - 1))__ times |
+| `flatten (accumulate-append)`     |   __𝚹(n * length (queen-cols (k - 1)))__  |
+| `filter`                          |   __𝚹(n * length (queen-cols (k - 1)))__  |
+| `safe?`                           |   __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times |
 
 #### Size of inputs and outputs
 
