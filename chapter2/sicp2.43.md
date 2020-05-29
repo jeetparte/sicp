@@ -107,7 +107,7 @@ We can express the cost at each level in terms of the highest level, (queen-cols
 
 __r(queen-cols (n - 1)) = r(queen-cols n) / n__ (because it operates on no. of board positions _n_ times smaller). Stated generally, __r(queen-cols (n - k)) = r(queen-cols n) / n^k__. 
 
-Since the _kth_ level is computed _n^k_ times, this means each level of the recursive tree amounts to a cost of __r(queen-cols n)__. Since there are _n + 1_ levels, the total cost,
+Since the _kth_ level is computed _n^k_ times, this means each level of the recursive tree amounts to a cost of __r(queen-cols n)__. Since there are _n + 1_ levels, the total cost is
 ```
 R(queens n) = (n + 1) * r(queen-cols n)
 ```
