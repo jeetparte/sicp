@@ -27,6 +27,7 @@ The cost of operations at each level depends on three factors: *n*, *k* and the 
 
 Cost of the various operations is summarized below:
 
+| Operation                         | Cost            |
 | --------------------------------- | --------------  |
 | `enumerate-interval`              |   __𝚹(n)__, repeated __length (queen-cols (k - 1))__ |times  
 | `adjoin-position`*                |   __𝚹(1)__ or __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times  |
@@ -80,6 +81,7 @@ In the tree generated, there are _n_ branches off of each internal node and the 
 
 The cost of operations at each level is, for most operations, identical:
 
+| Operation                         | Cost            |
 | --------------------------------- | --------------  |
 | `enumerate-interval`              |   __𝚹(n)__, a single operation now. |
 | `adjoin-position`*                |   __𝚹(1)__ or __𝚹(k)__, repeated __n * length || (queen-cols (k - 1))__ times |
