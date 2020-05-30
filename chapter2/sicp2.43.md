@@ -36,7 +36,7 @@ Cost of the various operations is summarized below:
 | `safe?`                           |   __𝚹(k)__, repeated __n * length (queen-cols (k - 1))__ times |
 
 
-Across level, _n_ remains constant, _k_ changes diminuitively. The overall cost is most influenced by the number of board positions: *length (queen-cols (k - 1))*.
+Across levels, _n_ remains constant, _k_ changes diminuitively. The overall cost is most influenced by the number of board positions: *length (queen-cols (k - 1))*.
 
 *Each `adjoin-position` can be __𝚹(1)__ or __𝚹(k)__, depending on whether we are appending to the list of positions at the beginning or at the end.
 
@@ -56,8 +56,8 @@ Looking back at the cost of operations, we can say that the cost for the _kth_ l
 So for the original program, 
 
  ```
-R(queens n) = r(queen-cols n) + r(queen-cols (n - 1)) + ... r(0)
-            = n^n + n^(n-1) + ... n^0
+R(queens n) = r(queen-cols n) + r(queen-cols (n - 1)) + ... + r(0)
+            = n^n + n^(n-1) + ... + n^0
             = Σ n^k
 ```
 Therefore, R(queens n) = __𝚹(n^n)__.
