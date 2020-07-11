@@ -5,7 +5,7 @@
 ; d(u^n) = n*(u^n-1)*d(u).
 
 ; Instead of the direct subtraction used in sicp2.56.rkt,
-; where I assumed the exponent was always a number, we can use an appropriate
+; which assumes the exponent is always a number, we can use an appropriate
 ; abstraction in which both difference arguments can be arbitrary symbols.
 
 ; And while we're adding subtraction to the mix, might as well add support for differentiation.
