@@ -8,8 +8,8 @@
 ; which assumes the exponent is always a number, we can use an appropriate
 ; abstraction in which both difference arguments can be arbitrary symbols.
 
-; And while we're adding subtraction to the mix, might as well add support for differentiation.
-; The below symbolic-differentiation program supports difference expressions as well.
+; And while we're adding subtraction to the mix, might as well fully support it;
+; the below symbolic-differentiation program supports difference expressions as well.
 (define (deriv exp var)
   (cond ((number? exp) 0)
         ((variable? exp) (if (same-variable? exp var) 1 0))
