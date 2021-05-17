@@ -26,13 +26,13 @@
 (define (augend s)
   (let ((sum-terms (cdr s)))
     (cond ((= (length sum-terms) 2) (cadr sum-terms))
-          ((> (length sum-terms)  2) (append '(+) (cdr sum-terms))))))
+          ((> (length sum-terms)  2) (cons '+ (cdr sum-terms))))))
 
 (define (multiplier p) (cadr p))
 (define (multiplicand p)
   (let ((product-terms (cdr p)))
     (cond ((= (length product-terms) 2) (cadr product-terms))
-          ((> (length product-terms)  2) (append '(*) (cdr product-terms))))))
+          ((> (length product-terms)  2) (cons '* (cdr product-terms))))))
 
 ; C. (Bonus)
 ; I thought that `(make-product 'a '(* b c))` should simply return `(* a b c)` instead of `(* a (* b c))`.
