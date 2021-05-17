@@ -9,7 +9,7 @@
   (define (is-sum? exp)
     (and (pair? exp) (eq? (car exp) '+)))
   (if (and (is-sum? exp) (< (length (cdr exp)) 2))
-      (error "Found sum expression with less than 2 product terms. Invalid expression: "
+      (error "Found sum expression with less than 2 sum terms. Invalid expression: "
              exp)
       (is-sum? exp)))
 
