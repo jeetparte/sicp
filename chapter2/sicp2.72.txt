@@ -1,0 +1,21 @@
+For the general case, for a tree with n symbols, the  order of growth in the
+number of steps for encoding a given symbol depends upon the position of the symbol within the tree, i.e. which branches lead to its leaf when starting at the root, whether left or right, and how many, and the structure of the tree, i.e. 
+the symbol lists encountered at every node along the way.
+
+We can consider the best and worst cases along two different axes of consideration and extrapolate for cases in between. The symbol could be located right below the root of the tree as one of its direct branches or it could be farthest from the root at a maximum depth of n-1. Also, we may get lucky with our searches in the symbol list at each node encountered so that the symbol is found in Θ(1) steps every time. Or we may have to search through all the symbols at very node and since the number of symbols at every node is some function of n, we may
+consider the cost of searching to be Θ(n) at every node encountered.
+Here are the orders of growth from permuting on these scenarios:
+
+- best position, best search - Θ(1)
+- best position, worst search - Θ(n)
+- worst position, best search - Θ(n)
+- worse position, worst search - Θ(n^2)
+
+It is difficult to answer for the average case, since that would require us to know the structure of the average huffman tree. But if we consider that the average tree distributes its elements evenly between its branches (even if they 
+aren't halves at every step), then the average element might very well be within a depth of log n from the root of the tree (remember frequent symbols being closer to the tree helps our assumption). So our average complexity might be Θ(n.logn). If we can make our search more efficient so that it is Θ(1) steps every time, our average complexity would improve to Θ(logn).
+
+In the special case described in ex. 2.71, we observe that the depth of the tree is n-1. 
+
+For the most frequent symbol, we need only search once which would mean Θ(n) in the worst case and Θ(1) in the best. 
+
+For the least frequent symbol, we would encounter about n-1 nodes along the way so depending on our search efficiency, we'd make searches of Θ(n), Θ(n-1) and so on, which would give us a number of steps of n*(n+1)/2 or Θ(n^2) order of growth in the worst case. Or with Θ(1) efficient searching, we'd have Θ(n) in the best case.

@@ -1,0 +1,56 @@
+Tree for n = 5:
+
+(Note: Here I've chosen the symbols to be same as their weights. Also notice that 
+∑ 2^k for k=0...n is 2^n+1 - 1. So weight {1 2 4 2^n-1} is always smaller than 2^n,
+the weight of the biggest element.)
+
+
+		{1 2 4 8 16}
+	      ______________
+              |            |
+	  {1 2 4 8}        16
+	____________
+        |	   |
+     {1 2 4}	   8
+  ___________
+  |         |
+{1 2}       4
+-----
+|   |
+1   2
+
+Tree for n = 10:
+								{1 2 4 8 16 32 64 128 256 512}
+ 								_____________________________
+							        |                            |
+						    {1 2 4 8 16 32 64 128 256}              512
+						   __________________________
+					           |                         | 
+			                {1 2 4 8 16 32 64 128}              256
+					_____________________
+					|                    |
+				{1 2 4 8 16 32 64}          128
+			    ______________________
+		 	    |			  |
+                     {1 2 4 8 16 32}		  64
+	    	    ________________
+                    |              |
+		{1 2 4 8 16}       32
+	      ______________
+              |            |
+	  {1 2 4 8}        16
+	____________
+        |	   |
+     {1 2 4}	   8
+  ___________
+  |         |
+{1 2}       4
+-----
+|   |
+1   2
+
+
+For general n, 1 bit is required to encode the most frequent symbol (it is one branch
+away from the root of the tree). And n-1 bits are required to encode the least 
+frequent symbol (it is the number of levels in the tree - 1 level is required in a 
+tree with 2 symbols, and thereafter each extra symbol adds 1 more level to the tree).
