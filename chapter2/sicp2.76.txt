@@ -1,0 +1,13 @@
+For generic operations with explicit dispatch, addition of a new type will introduce changes in all generic operations supported by the type - each supported operation must add a dispatch predicate and provide (directly or indirectly) an implementation of the operation for the type. Addition of a new generic operation will introduce a change as the new definition plus any external implementations required for the supporting types. This method of organisation is suitable for neither a system where new types are added frequently nor for a system where new operations are added frequently because both requirements introduce changes in multiple modules.
+
+In the data-directed style, addition of a new type must be accompanied by 'installing' its implementations of supported generic operations into the dispatch table. A new installation package is created; the generic operations themselves remain unchanged.
+
+If new operations are added on the other hand, multiple installation packages must be modified to include implementations specific to the package type. But only existing packages must be modified, no new installation package needs to be created.
+
+In the message-passing style, addition of new operations affect changes in each supporting type definition - a predicate for the generic operation must be added along with the type's implementation
+of the operation. Addition of a new type involves creating the type definition with associated operation implementations. No other component needs to be modified.
+
+
+For a system in which new types must be added often, the message-passing style is most appropriate as changes are confined to the newly created type definition. The data-directed style is not desirable here as the addition of each new type necessitates the creation of a new installation package.
+
+For a system in which new operations must be added often, the data-directed style is most appropriate as changes are confined to existing installation packages. No new packages need to be created and the generic operations themselves remain unchanged. The message-passing style is not desirable here as multiple type definitions must be updated - each must add a dispatch predicate on the operation to perform along with a supporting implementation.
