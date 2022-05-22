@@ -1,0 +1,22 @@
+Alyssa's suggestion works because when any of the complex-number selectors is applied to a complex number (tagged with 'complex), it forwards the request to (apply-generic 'magnitude internal-complex-representation) which then dispatches to the appropriate procedure. In terms of procedure calls, apply-generic is called twice before dispatching to the actual procedure. The first time, apply-generic strips off the 'complex tag and calls apply-generic on the content which is '(rectangular 3 4) here. This second call strips of the internal type-tag ('rectangular here) and calls the actual procedure for the selector on the untagged datum.
+
+Trace for the evaluation using the substitution model:
+
+(magnitude z)
+(magnitude '(complex rectangular 3 4))
+(apply-generic 'magnitude '(complex rectangular 3 4))
+(apply (get 'magnitude '(complex)) (list '(rectangular 3 4)))
+(apply magnitude (list '(rectangular 3 4)))
+
+(magnitude '(rectangular 3 4))
+(apply-generic 'magnitude '(rectangular 3 4))
+(apply (get 'magnitude '(rectangular)) (list '(3 4)))
+(apply magnitude (list '(3 4)))
+(magnitude '(3 4))
+(sqrt (+ (square (real-part '(3 4)))
+         (square (imag-part '(3 4)))))
+(sqrt (+ (square (car '(3 4)))
+         (square (cdr '(3 4)))))
+(sqrt (+ (square 3)
+         (square 4)))
+5
